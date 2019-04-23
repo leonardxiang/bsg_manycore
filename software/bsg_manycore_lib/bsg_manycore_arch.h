@@ -80,6 +80,8 @@
                                         )
 #define bsg_dram_ptr(local_addr) (  (bsg_remote_int_ptr)  ((1<< 31) | ((int) (local_addr))  ) )
 
+#define bsg_dram_uint8_ptr(local_addr) (  (bsg_remote_uint8_ptr)  ((1<< 31) | ((unsigned char) (local_addr))  ) )
+
 #define bsg_local_ptr( remote_addr)  (    (int) (remote_addr)                           \
                                         & (   (1 << bsg_remote_addr_bits) - 1 )         \
                                      )
